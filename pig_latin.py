@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
-original = input("Please enter a sentence: ").lower().strip()
-words = original.split()
-new_words = []
+words = input("Please enter a sentence: ").lower().strip().split()
+latin = []
 
 for word in words:
     if word[0] in "aeiou":
-        new_word = word + "yay"
-        new_words.append(new_word)
+        latin.append(word + "yay")
     else:
         vowel_pos = 0
         for letter in word:
@@ -18,7 +16,7 @@ for word in words:
         cons = word[:vowel_pos]
         the_rest = word[vowel_pos:]
         new_word = the_rest + cons + "ay"
-        new_words.append(new_word)
+        latin.append(new_word)
 
-output = " ".join(new_words)
+output = " ".join(latin)
 print(output)
