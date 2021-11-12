@@ -5,7 +5,6 @@ items = input("Please write a list of words: ").split()
 print("\n")
 def anagram(word,items):
     output = []
-
     for i in items:
         if sorted(i) == sorted(word):
             output.append(i)
