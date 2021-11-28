@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 
-string = input("Enter the string: ").lower().replace(" ", "").replace(",", "")
-check = set(string)
+import string
 
-if len(check) == 26:
+def pangram(s):
+    alphabet = string.ascii_lowercase
+    for i in alphabet:
+        if i not in s.lower():
+            return False
+    return True
+
+sentence = input()
+if pangram(sentence):
     print("This is a pangram")
 else:
-    print("try again")
+    print("Try again")
